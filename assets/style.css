@@ -74,35 +74,71 @@ a {
 
 @media screen and (max-width: 480px) {
   
-  body {
-    font-size: 16px;
+    body {
+      font-size: 16px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--second-color);
+      padding: 25px;
+      height: 150px;
+      margin-top: -5px;
+      margin-bottom: 20px;
+      color: white;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+      
+      h1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+        margin-top: -5px;
+        width: max-content;
+        font-weight: bolder;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      nav {
+        display: flex;
+        margin-top: 10px;
+        position: absolute;
+        bottom: 455px;
+        left: 50px;
+      }
+
+      ul {
+        display: flex; 
+        align-self: end;
+        width: max-content;
+        gap: 35px;
+        font-size: 20px;
+
+        li {
+          font-weight: bolder;
+          cursor: pointer;
+        }
+      }
+    }
+
+    #contact {
+      display: flex;
+      flex-direction: vertical;
+      gap: 10px;
+      margin-top: 5px;
+    }
   }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--second-color);
-    padding: 20px;
-    color: white;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-  }
-
-  header h1 {
-    font-size: 25px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-weight: bolder;
-  }
-
-  header p {
-    font-size: 15px;
-  }
-
-
 
 
 /************************ MEDIA QUERIES [TABLET] ***********************/
 
+.cover {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+}
 
 @media (min-width: 481px) and (max-width: 768px) {
   /* Styles pour les écrans de largeur maximale de 768px */
