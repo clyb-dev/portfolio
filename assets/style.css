@@ -1,4 +1,21 @@
-/* Reset CSS */
+/********************** RESET CSS ***********************/
+
+
+:root {
+  --main-color: #1c5cb0;
+  --second-color: #232324;
+}
+
+
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459WRhyyTn89ddpROi.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
 
 * {
   margin: 0;
@@ -7,7 +24,11 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
+  font-family: Montserrat, sans-serif;
 }
+
 
 body {
   line-height: 1;
@@ -41,3 +62,64 @@ a img {
   border: none;
 }
 
+a {
+  color: inherit;
+}
+
+
+
+/********************** END OF RESET ***********************/
+
+/************************ MEDIA QUERIES [MOBILE] ***********************/
+
+@media screen and (max-width: 480px) {
+  
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--second-color);
+    padding: 20px;
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  header h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bolder;
+  }
+
+  header p {
+    font-size: 15px;
+  }
+
+
+
+
+/************************ MEDIA QUERIES [TABLET] ***********************/
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Styles pour les écrans de largeur maximale de 768px */
+}
+
+
+/************************ MEDIA QUERIES [Large screen] ***********************/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles spécifiques pour les écrans de grande taille */
+}
+
+
+/************************ MEDIA QUERIES [Large screen] ***********************/
+
+
+/* Styles pour les écrans de largeur supérieure à 1025px */
+@media (min-width: 1025px) {
+  /* Styles spécifiques pour les écrans de très grande taille */
+}
