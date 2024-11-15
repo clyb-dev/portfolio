@@ -4,6 +4,7 @@
 :root {
   --main-color: #1c5cb0;
   --second-color: #232324;
+  --third-color: #3b3b3b;
 }
 
 
@@ -72,102 +73,138 @@ a {
   color: inherit;
 }
 
-
-
-
 /********************** END OF RESET ***********************/
 
-.cover {
+
+
+
+/******* HEADER ********/
+
+body {
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  height: 150px;
+  margin-top: -5px;
+  color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  background-image: url('../assets/images/header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 100vh;
+  display: block;
+
+  h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: -5px;
+    width: max-content;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  nav {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  ul {
+    display: flex;
+    gap: 15px;
+
+    li {
+      font-weight: bolder;
+      cursor: pointer;
+    }
+  }
+}
+
+#contact {
+  display: flex;
+  flex-direction: vertical;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.header_name {
+  display: flex;
+  align-self: self-end;
+  position: absolute;
+  left: 50px;
+
+  h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    display: none;
+  }
+}
+
+
+/******* MAIN ********/
+
+#about {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 25px;
+  background-color: var(--third-color);
+  color: white;
+
+  h3 {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .parcours {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 /************************ MEDIA QUERIES [MOBILE] ***********************/
 
-/******* HEADER ********/
-
 @media screen and (max-width: 480px) {
 
-  body {
-    font-size: 16px;
+  .cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
   }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--second-color);
-    padding: 25px;
-    height: 150px;
-    margin-top: -5px;
-    margin-bottom: 20px;
-    color: white;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-
-    h1 {
-      font-size: 25px;
-      margin-bottom: 10px;
-      margin-top: -5px;
-      width: max-content;
-      font-weight: bolder;
-    }
-
-    p {
-      font-size: 12px;
-    }
-
-    nav {
-      display: flex;
-      margin-top: 10px;
-      position: absolute;
-      bottom: 455px;
-      left: 50px;
-    }
-
-    ul {
-      display: flex;
-      align-self: end;
-      width: max-content;
-      gap: 35px;
-      font-size: 20px;
-
-      li {
-        font-weight: bolder;
-        cursor: pointer;
-      }
-    }
-  }
-
-  #contact {
-    display: flex;
-    flex-direction: vertical;
-    gap: 10px;
-    margin-top: 5px;
-  }
 }
-
-/******* MAIN ********/
-
-
 
 /************************ MEDIA QUERIES [TABLET] ***********************/
 
-@media (min-width: 481px) and (max-width: 768px) {
-  /* Styles pour les écrans de largeur maximale de 768px */
-}
-
+@media (min-width: 481px) and (max-width: 768px) {}
 
 /************************ MEDIA QUERIES [Large screen] ***********************/
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Styles spécifiques pour les écrans de grande taille */
-}
-
+@media (min-width: 769px) and (max-width: 1024px) {}
 
 /************************ MEDIA QUERIES [Large screen] ***********************/
 
-
-/* Styles pour les écrans de largeur supérieure à 1025px */
-@media (min-width: 1025px) {
-  /* Styles spécifiques pour les écrans de très grande taille */
-}
+@media (min-width: 1025px) {}
